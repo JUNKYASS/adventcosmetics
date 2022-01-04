@@ -1,12 +1,17 @@
 {
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.scss"
   ],
   "exclude": [
     "node_modules"
   ],
   "compilerOptions": {
+    "baseUrl": "./src", 
+    // "paths": { // it works fine
+    //   "Nav/*": ["components/Header/Nav/*"],
+    // },
     "target": "es5",
     "lib": [
       "dom",

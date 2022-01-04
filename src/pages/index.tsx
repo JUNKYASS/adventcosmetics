@@ -1,8 +1,11 @@
-const Home = (): JSX.Element => {
+import React from 'react';
+import { Layout } from 'components/Layout/Layout';
+
+const Home: React.FC = () => {
   return (
-    <div>
-      Hello, NextJS!
-    </div>
+    <Layout>
+       Hello, NextJS!
+    </Layout>
   );
 };
 

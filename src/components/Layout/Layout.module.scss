@@ -1,0 +1,8 @@
+@import 'Styles/colors.module.scss';
+@import 'Styles/utils.module.scss';
+
+.layout {
+  background-color: $baseBlackColor;
+
+  @extend .contentCentered;
+}

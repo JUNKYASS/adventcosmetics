@@ -1,0 +1,3 @@
+{
+  "presets": ["next/babel"] // it makes absolute paths work and also "path aliases" in tsconfig.json
+}
