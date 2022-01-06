@@ -1,0 +1,9 @@
+.root {
+  display: flex;
+  
+  .item {
+    &:not(:first-child) {
+      margin-left: 13px;
+    }
+  }
+}

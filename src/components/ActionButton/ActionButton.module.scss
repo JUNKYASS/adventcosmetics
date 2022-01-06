@@ -1,0 +1,64 @@
+.root {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 18px 36px;
+  margin-top: 55px;
+
+  background: linear-gradient(90deg, #66434A -9.26%, #EE8888 117.96%);
+
+  cursor: pointer;
+  user-select: none;
+
+  .text {
+    margin-right: 20px;
+
+    font-family: 'Oswald', monospace;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 29.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    color: white;
+  }
+
+  .icon {
+    transition: transform 0.3s ease;
+  }
+
+  .stars {
+    z-index: -1;
+    position: absolute;
+
+    right: -88px;
+    bottom: -76px;
+
+    pointer-events: none;
+  }
+
+  &:before {
+    content: "";
+
+    z-index: -1;
+    position: absolute;
+    left: -5px;
+    bottom: -6px;
+
+    width: 42px;
+    height: 42px;
+
+    border-left: 1px solid #66434A;
+    border-bottom: 1px solid #66434A;
+    
+    pointer-events: none;
+  }
+
+  &:hover {
+    .icon {
+      transform: translateX(5px);
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "open http://localhost:3000 & next dev",
+    "dev": "start http://localhost:3000 & next dev",
+    "dev:mac": "open http://localhost:3000 & next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src/**/*.{ts,tsx}"
@@ -23,11 +24,14 @@
     "@babel/preset-env": "^7.16.7",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/react-scroll": "^1.8.3",
     "classnames": "^2.3.1",
     "next": "^12.0.7",
+    "next-images": "^1.8.4",
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-scroll": "^1.8.4",
     "sass": "^1.45.2",
     "typescript": "^4.5.4"
   },

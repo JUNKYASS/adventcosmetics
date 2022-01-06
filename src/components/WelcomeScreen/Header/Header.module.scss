@@ -1,4 +1,11 @@
 .root {
-  height: 60px;
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  .logo { 
+    user-select: none;
+    cursor: pointer;
+  }
 }

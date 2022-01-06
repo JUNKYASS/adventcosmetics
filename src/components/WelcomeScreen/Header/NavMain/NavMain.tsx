@@ -1,6 +1,8 @@
-import styles from 'NavMenu.module.scss';
+import NavMainItem from './NavMainItem/NavMainItem';
 
-const NavMenu = () => {
+import styles from './NavMain.module.scss';
+
+const NavMain = () => {
   const navItems = [
     {
       id: 'contacts',
@@ -16,14 +18,25 @@ const NavMenu = () => {
     },
     {
       id: 'order',
-      name: 'Заказать'
+      name: 'Заказать',
+      active: true
     },
   ];
+
   return (
     <div className={styles.root}>
-      
+      {
+        navItems.map(item => {
+          return <NavMainItem
+            key={item.id}
+            id={item.id} 
+            name={item.name} 
+            active={item.active || false}
+          />;
+        })
+      }
     </div>
   );
 };
 
-export default NavMenu;
+export default NavMain;

@@ -1,4 +1,5 @@
-@import 'Styles/colors.module.scss';
+@import 'styles/colors.module.scss';
+@import 'styles/fonts.module.scss';
 
 html, body {
   height: 100%;
@@ -6,5 +7,17 @@ html, body {
   margin: 0;
   padding: 0;
 
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
   background-color: $baseBlackColor;
+}
+
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
+  font-weight: 500;
+
+  color: $darkTextColor;
 }

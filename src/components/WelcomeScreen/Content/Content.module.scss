@@ -1,0 +1,122 @@
+@import 'styles/colors.module.scss';
+
+.root {
+  margin-top: 90px;
+
+  .primary {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    .arrow {
+      position: absolute;
+      left: unset !important;
+      bottom: unset !important;
+      right: 160px !important;
+      top: 40px !important;
+
+      width: 15vw;
+      height: 120px;
+
+      border: 1px solid;
+      border-image-source: linear-gradient(87deg, rgba(255, 0, 0, 0) 5%, rgba(168, 85, 46, 0.753) 63%, rgba(255, 181, 147, 0.63) 75%, rgba(168, 85, 46, 0.9) 80.56%, rgba(160, 48, 177, 0.5) 99%);
+      border-image-slice: 1;
+      border-left: transparent;
+      border-bottom: transparent;
+
+      .triangle {
+        position: absolute;
+        right: -3.5px;
+        bottom: -3px;
+
+        height: 16px;
+      }
+    }
+
+    .heading {
+      .headingFirst {
+        font-family: 'SovMod';
+        font-size: 40px;
+        line-height: 43.5px;
+
+        background: linear-gradient(270deg, $purple 0%, $brown 100%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      .headingSecond {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: 0.8px;
+
+        color: $darkTextColor;
+      }
+    }
+  }
+
+  .secondary {
+    padding-left: 60px;
+    margin-top: 90px;
+    
+    .info {
+      max-width: 520px;
+
+      .headingFirst {
+        font-family: 'Oswald', sans-serif;
+        font-size: 42px;
+        line-height: 1;
+        font-weight: 400;
+
+        color: white;
+      }
+
+      .headingSecond {
+        margin-top: 28px;
+
+        font-size: 16px;
+        line-height: 24px;
+
+        color: $lightTextColor;
+      }
+
+      .exclamation {
+        display: flex;
+        align-items: center;
+        margin-top: 18px;
+
+        font-weight: normal;
+        line-height: 16.35px;
+
+        color: #5B5A66;
+
+        cursor: pointer;
+
+        .icon {
+          margin-right: 8px;
+        }
+      }
+
+      .video {
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 15px;
+
+        color: #6F6F6F;
+        
+        cursor: pointer;
+
+        
+        .icon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
