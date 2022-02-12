@@ -1,0 +1,100 @@
+@import 'styles/colors.module.scss';
+
+.root {
+  z-index: 1;
+  position: fixed;
+  top: 436px;
+  left: calc(50% - 500px);
+  
+  display: grid;
+  grid-gap: 40px;
+
+  user-select: none;
+  transition: left 1s ease;
+
+  &.scrolled {
+    left: 50px;
+  }
+  
+  .item {
+    position: relative;
+
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+
+    color: $baseTextColor;
+
+    cursor: pointer;
+
+    &.active {
+      font-weight: 700;
+
+      color: $lightPink;
+
+      &:before {
+        content: "";
+
+        position: absolute;
+        right: calc(100% + 6px);
+        top: 50%;
+
+        width: 10px;
+        height: 2px;
+
+        background-color: $lightPink;
+        border-radius: 30px;
+
+        transform: translateY(-50%);
+      }
+    }
+
+    &:not(:first-child) {
+      &:after {
+        content: "";
+
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+
+        height: 20px;
+        width: 1px;
+
+        background-color: $baseTextColor;
+
+        transform: translateX(-50%);
+        user-select: 0;
+        pointer-events: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    top: 353px;
+    left: 25px
+  }
+
+  @media (max-width: 900px) {
+    top: 346px;
+    left: 36px;
+  }
+
+  @media (max-width: 780px) {
+    top: 267px;
+    left: 17px;
+
+    .item {
+      font-size: 14px;
+
+      &.active {
+        &:before {
+          right: calc(100% + 3px);
+
+          width: 6px;
+
+          transform: translateY(-25%);
+        }
+      }
+    }
+  }
+}

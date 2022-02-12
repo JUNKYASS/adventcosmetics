@@ -1,8 +1,13 @@
 import NavMainItem from './NavMainItem/NavMainItem';
-
+import cn from 'classnames';
 import styles from './NavMain.module.scss';
 
-const NavMain = () => {
+interface INavMainProps {
+  cname?: string,
+}
+
+const NavMain: React.FC<INavMainProps> = (props) => {
+  const { cname } = props;
   const navItems = [
     {
       id: 'contacts',
@@ -24,13 +29,13 @@ const NavMain = () => {
   ];
 
   return (
-    <div className={styles.root}>
+    <div className={cn(styles.root, cname)}>
       {
         navItems.map(item => {
           return <NavMainItem
             key={item.id}
-            id={item.id} 
-            name={item.name} 
+            id={item.id}
+            name={item.name}
             active={item.active || false}
           />;
         })

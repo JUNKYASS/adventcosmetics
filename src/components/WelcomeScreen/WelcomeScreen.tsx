@@ -6,9 +6,16 @@ import Image from 'next/image';
 import cn from 'classnames';
 import Content from './Content/Content';
 
-const WelcomeScreen = () => {
+interface IWelcomeScreenProps {
+  id?: string,
+  refProp: any,
+}
+
+const WelcomeScreen: React.FC<IWelcomeScreenProps> = (props) => {
+  const { id, refProp } = props;
+
   return (
-    <section className={styles.root}>
+    <section className={cn(styles.root, 'screen')} id={id} ref={refProp} >
       <Image 
         src={BackgroundImage} 
         layout='fill'

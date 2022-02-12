@@ -36,4 +36,11 @@
       }
     }
   }
+
+  @media (max-width: 900px) {
+    .link {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
 }

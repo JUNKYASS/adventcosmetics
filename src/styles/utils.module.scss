@@ -1,4 +1,13 @@
 .contentCentered {
-  max-width: 960px;
+  max-width: 1050px;
+  padding: 0 45px;
   margin: 0 auto;
+
+  @media (max-width: 1050px) {
+    max-width: 955px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 0 25px;
+  }
 }

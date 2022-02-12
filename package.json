@@ -31,7 +31,9 @@
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-responsive": "^9.0.0-beta.5",
     "react-scroll": "^1.8.4",
+    "recoil": "^0.5.2",
     "sass": "^1.45.2",
     "typescript": "^4.5.4"
   },

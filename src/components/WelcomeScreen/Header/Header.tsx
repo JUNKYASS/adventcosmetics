@@ -1,17 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
 import Logo from 'assets/images/logo.svg';
 import styles from './Header.module.scss';
-
+import MobileMenuOpenBtn from 'assets/images/mobile-menu.svg';
 import NavMain from './NavMain/NavMain';
 import ContactPhoneNumber from 'components/ContactPhoneNumber/ContactPhoneNumber';
+import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
+  const isLaptop = useMediaQuery({ maxWidth: 780 });
+
   return (
     <header className={styles.root}>
       <Link href='/'>
-        <a>
+        <a className={styles.logoWrap}>
           <Image 
             src={Logo}
             quality={100}
@@ -24,8 +26,10 @@ const Header = () => {
           />
         </a>
       </Link>
-      <NavMain />
-      <ContactPhoneNumber />
+      {!isLaptop && <NavMain cname={styles.navmain} />}
+      <ContactPhoneNumber cname={styles.phoneNumber} />
+
+      {isLaptop && <span className={styles.mobileMenuOpenBtn}><Image src={MobileMenuOpenBtn} alt='phone icon' /></span>}
     </header>
   );
 };

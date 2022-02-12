@@ -1,12 +1,27 @@
 .root {
   display: flex;
   align-items: center;
-    
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
 
-  span {
+  .text {
     margin-right: 10px;
+    
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .icon {
+    height: 15px;
+  }
+
+  @media (max-width: 780px) {
+    .text {
+      font-size: 12px !important;
+      line-height: 14px;
+    }
+
+    .icon {
+      height: 18px;
+    }
   }
 }

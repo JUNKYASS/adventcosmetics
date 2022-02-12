@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+
+  .link {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    .text {
+      margin-left: 8px;
+      line-height: 16px;
+    }
+  }
+}

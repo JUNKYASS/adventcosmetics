@@ -4,8 +4,52 @@
   justify-content: space-between;
   padding-top: 30px;
 
-  .logo { 
-    user-select: none;
-    cursor: pointer;
+  .logoWrap {
+    margin-bottom: -25px;
+
+    .logo {
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+
+  .navmain {
+    margin-left: -60px;
+  }
+
+  .mobileMenuOpenBtn {
+    margin-left: auto;
+    height: 23px;
+
+    transform: rotate(180deg);
+
+    fill: red;
+  }
+  
+  @media (max-width: 1050px) {
+    .navmain {
+      margin-left: unset;
+    }
+  }
+
+  @media (max-width: 780px) {
+    justify-content: initial;
+
+    .phoneNumber {
+      margin-left: 40px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .phoneNumber {
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 370px) {
+    .phoneNumber {
+      display: none;
+    }
   }
 }
+

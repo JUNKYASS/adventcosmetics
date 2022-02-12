@@ -4,8 +4,15 @@ import Facebook from 'assets/images/facebook.svg';
 import Vk from 'assets/images/vk.svg';
 import Link from 'next/link';
 import Image from 'next/image';
+import cn from 'classnames';
 
-const Socials = () => {
+interface ISocialsProps {
+  cname?: string,
+}
+
+const Socials: React.FC<ISocialsProps> = (props) => {
+  const { cname } = props;
+
   const socialsList = [
     {
       id: 'vk',
@@ -28,7 +35,7 @@ const Socials = () => {
   ];
 
   return (
-    <div className={styles.root}>
+    <div className={cn(styles.root, cname)}>
       {
         socialsList.map(item => {
           return (
