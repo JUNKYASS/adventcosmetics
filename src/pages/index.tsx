@@ -3,24 +3,24 @@ import { Layout } from 'components/Layout/Layout';
 import WelcomeScreen from 'components/WelcomeScreen/WelcomeScreen';
 import AboutScreen from 'components/AboutScreen/AboutScreen';
 import AdvantagesScreen from 'components/AdvantagesScreen/AdvantagesScreen';
-import BoxComposition from 'components/BoxComposition/BoxComposition';
+import BoxCompositionScreen from 'components/BoxCompositionScreen/BoxCompositionScreen';
 
 const Home: React.FC = () => {
   const welcomeScreenRef = useRef();
   const aboutScreenRef = useRef();
-  const boxCompositionRef = useRef();
+  const boxCompositionScreenRef = useRef();
   const advantagesScreenRef = useRef();
   const [childRefs, setChildRef] = useState<any[]>([]);
 
   useEffect(() => {
-    setChildRef([welcomeScreenRef, aboutScreenRef, boxCompositionRef, advantagesScreenRef]);
+    setChildRef([welcomeScreenRef, aboutScreenRef, boxCompositionScreenRef, advantagesScreenRef]);
   }, []);
 
   return (
     <Layout childRefs={childRefs}>
       <WelcomeScreen id='welcomescreen' refProp={welcomeScreenRef} />
       <AboutScreen id='aboutscreen' refProp={aboutScreenRef} />
-      <BoxComposition id='boxcomposition' refProp={boxCompositionRef} />
+      <BoxCompositionScreen id='boxcomposition' refProp={boxCompositionScreenRef} />
       <AdvantagesScreen id='advantagesscreen' refProp={advantagesScreenRef} />
     </Layout>
   );

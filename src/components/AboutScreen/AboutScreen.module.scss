@@ -1,2 +1,55 @@
 @import 'Styles/utils.module.scss';
 
+.root {
+  position: relative;
+
+  height: 1100px;
+  padding-top: 150px;
+
+  .heading {
+    .subHeading {
+      // font-family: Raleway;
+      // font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 93.69%;
+    }
+
+    .mainHeading {
+      font-family: Oswald;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 93.69%;
+    }
+  }
+
+  .aboutline {
+    z-index: 1;
+    position: relative;
+
+    width: 100%;
+
+    .heading {
+      text-align: center;
+    }
+
+    .aboutlineImageBlock {
+      position: absolute;
+      top: 130px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      .aboutlineImage {
+        // position: absolute;
+        // left: 50%;
+    
+        // transform: translateX(-50%);
+      }
+    }
+  }
+
+  // .bg {
+  //   z-index: -1;
+  // }
+}

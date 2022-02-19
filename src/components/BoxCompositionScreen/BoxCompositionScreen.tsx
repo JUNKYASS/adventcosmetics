@@ -1,15 +1,15 @@
-import styles from './BoxComposition.module.scss';
+import styles from './BoxCompositionScreen.module.scss';
 // import Image from 'next/image';
 import cn from 'classnames';
 import commonStyles from 'styles/utils.module.scss';
 import { productsMap } from 'assets/svg';
 
-interface IBoxCompositionProps {
+interface IBoxCompositionScreenProps {
   id?: string,
   refProp: any,
 }
 
-const BoxComposition: React.FC<IBoxCompositionProps> = (props) => {
+const BoxCompositionScreen: React.FC<IBoxCompositionScreenProps> = (props) => {
   const { id, refProp } = props;
 
   return (
@@ -23,4 +23,4 @@ const BoxComposition: React.FC<IBoxCompositionProps> = (props) => {
   );
 };
 
-export default BoxComposition;
+export default BoxCompositionScreen;

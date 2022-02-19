@@ -25,11 +25,6 @@ const Layout = (props: ILayoutProps) => {
   };
 
   useEffect(() => {
-    console.log(currentScreen);
-    
-  }, [currentScreen]);
-
-  useEffect(() => {
     const topOffsets = childRefs.map((ref) => (ref.current.getBoundingClientRect().top));
     const handleScrollWrap = () => handleScroll(topOffsets);
 
