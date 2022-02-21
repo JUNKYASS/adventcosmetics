@@ -1,0 +1,22 @@
+@import "styles/colors.module.scss";
+
+.root {
+  .subHeading {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 93.69%;
+
+    color: $lightRed;
+  }
+
+  .mainHeading {
+    font-family: Oswald;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 93.69%;
+
+    color: white;
+  }
+}

@@ -1,4 +1,4 @@
-@import 'Styles/utils.module.scss';
+@import "Styles/utils.module.scss";
 
 .root {
   position: relative;
@@ -7,20 +7,7 @@
   padding-top: 150px;
 
   .heading {
-    .subHeading {
-      // font-family: Raleway;
-      // font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 93.69%;
-    }
-
-    .mainHeading {
-      font-family: Oswald;
-      font-weight: normal;
-      font-size: 34px;
-      line-height: 93.69%;
-    }
+    text-align: center;
   }
 
   .aboutline {
@@ -43,8 +30,40 @@
       .aboutlineImage {
         // position: absolute;
         // left: 50%;
-    
+
         // transform: translateX(-50%);
+      }
+    }
+
+    .aboutStages {
+      .aboutStage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 150px;
+        margin-top: 140px;
+
+        .title {
+          width: 180px;
+
+          font-family: Oswald;
+          font-size: 26px;
+          font-weight: normal;
+          text-align: right;
+          line-height: 3;
+
+          background: #9b56e0;
+          background: linear-gradient(to left, #9b56e0 0%, #ee8888 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .descr {
+          text-align: left;
+          max-width: 256px;
+          font-weight: bold;
+          font-size: 18px;
+        }
       }
     }
   }
