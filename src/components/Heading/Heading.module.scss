@@ -15,8 +15,19 @@
     font-family: Oswald;
     font-weight: normal;
     font-size: 34px;
-    line-height: 93.69%;
+    line-height: 107%;
 
     color: white;
+  }
+
+  @media (max-width: 780px) {
+    .subHeading {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .mainHeading {
+      font-size: 24px;
+    }
   }
 }

@@ -1,4 +1,5 @@
 @import "Styles/utils.module.scss";
+@import "styles/colors.module.scss";
 
 .root {
   position: relative;
@@ -41,28 +42,83 @@
         align-items: center;
         justify-content: center;
         gap: 150px;
-        margin-top: 140px;
+        margin-top: 84px;
+        margin-right: -90px;
+
+        &:nth-child(2) {
+          flex-direction: row-reverse;
+          margin-right: 0;
+          margin-top: 110px;
+          margin-left: -76px;
+
+          .title {
+            text-align: left;
+
+            background: linear-gradient(to left, #ee8888 0%, #9b56e0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .descr {
+            max-width: 210px;
+
+            text-align: right;
+
+            &:after {
+              left: unset;
+              right: -30px;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          margin-top: 102px;
+        }
 
         .title {
           width: 180px;
 
           font-family: Oswald;
           font-size: 26px;
+          line-height: 3;
           font-weight: normal;
           text-align: right;
-          line-height: 3;
 
           background: #9b56e0;
           background: linear-gradient(to left, #9b56e0 0%, #ee8888 100%);
+          background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
         .descr {
-          text-align: left;
+          position: relative;
+
           max-width: 256px;
-          font-weight: bold;
-          font-size: 18px;
+
+          text-align: left;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+
+          color: white;
+
+          &:after {
+            z-index: -1;
+
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: -30px;
+
+            width: 315px;
+            height: 100px;
+            background-color: $redColor;
+
+            transform: translateY(-50%);
+          }
         }
       }
     }
@@ -71,4 +127,44 @@
   // .bg {
   //   z-index: -1;
   // }
+
+  @media (max-width: 780px) {
+    .aboutline {
+      .aboutStages {
+        .aboutStage {
+          gap: 115px;
+          margin-top: 95px;
+          margin-right: 0px;
+
+          &:nth-child(2) {
+            margin-top: 99px;
+            margin-left: -15px;
+
+            .descr {
+              max-width: 157px;
+            }
+          }
+
+          // &:nth-child(3) {
+          //   margin-top: 102px;
+          // }
+
+          .title {
+            font-size: 20px;
+          }
+
+          .descr {
+            max-width: 157px;
+
+            font-size: 14px;
+            line-height: 18px;
+
+            &:after {
+              width: 230px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
